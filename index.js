@@ -35,6 +35,7 @@ async function run() {
             console.log(result);
             res.send(result)
         });
+
     }
     finally {
         // await client.close();
@@ -46,13 +47,6 @@ run().catch(console.dir);
 app.get('/', (req, res) => {
     res.send('Running dreamland server');
 });
-
-
-
-// client.connect(err => {
-//     const collection = client.db("test").collection("devices");
-//     // perform actions on the collection object
-// });
 
 app.listen(port, () => {
     console.log('Listening to port', port);
